@@ -17,3 +17,17 @@ class DataIngestionConfig:
 class DataIngestion:
     def __init__(self):
         self.ingestion_config=DataIngestionConfig()
+
+def initiate_data_ingestion(self):
+        try:
+            ##reading the data from mysql
+            logging.info("Data Ingestion is completed")
+
+            return(
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+
+            )
+
+        except Exception as e:
+            raise CustomException(e,sys)
